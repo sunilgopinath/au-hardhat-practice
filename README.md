@@ -1,18 +1,28 @@
-# Smart Contract Winner Challenge
+# Week 5 Challenge
+
+Today, we will be cloning down some fun smart contract puzzles. In these challenges, you will need to analyze the source code and somehow trigger a win condition. 🏆
+
+The objective is to set this isWon to true without modifying the smart contract.
+
+You will need to analyze the source code of five simplified smart contracts and determine how to solve a puzzle for each one. Once you've figured out the puzzle, modify the test cases to complete the task successfully
+
+# Week 4 Challenge
+
+## Smart Contract Winner Challenge
 
 This project demonstrates how to emit an event from a target contract where msg.sender != tx.origin using a proxy contract pattern.
 
-## Overview
+### Overview
 
 The challenge involves triggering the Winner event from a target contract that has a specific requirement: the function caller (msg.sender) must not be the same as the transaction originator (tx.origin).
 
-## Project Structure
+### Project Structure
 
 `contracts/Contract.sol` - The target contract with the attempt() function
 `contracts/ContractProxy.sol` - A proxy contract that calls the target contract
 `scripts/ContractProxy.js` - Script to deploy both contracts and execute the call
 
-## How It Works
+### How It Works
 
 The target contract has an attempt() function that requires msg.sender != tx.origin
 Our proxy contract calls this function, making:
@@ -23,7 +33,7 @@ Our proxy contract calls this function, making:
 
 This satisfies the condition and emits the Winner event
 
-## Contract Code
+### Contract Code
 
 The target contract:
 
@@ -64,15 +74,15 @@ contract ContractProxy {
 }
 ```
 
-## Running the Project
+### Running the Project
 
-### Start a local Hardhat node:
+#### Start a local Hardhat node:
 
 ```bash
 $> npx hardhat node
 ```
 
-### Deploy the contracts and execute:
+#### Deploy the contracts and execute:
 
 ```bash
 npx hardhat run scripts/ContractProxy.js --network localhost
@@ -80,7 +90,7 @@ npx hardhat run scripts/ContractProxy.js --network localhost
 
 Check the Hardhat node's console output to see the emitted Winner event.
 
-## Key Learning
+### Key Learning
 
 This challenge demonstrates:
 
