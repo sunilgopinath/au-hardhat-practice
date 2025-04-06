@@ -6,6 +6,14 @@ The objective is to set this isWon to true without modifying the smart contract.
 
 You will need to analyze the source code of five simplified smart contracts and determine how to solve a puzzle for each one. Once you've figured out the puzzle, modify the test cases to complete the task successfully
 
+## Solution
+
+See the [test](./test/) files
+
+```sh
+$> npx hardhat test
+```
+
 # Week 4 Challenge
 
 ## Smart Contract Winner Challenge
